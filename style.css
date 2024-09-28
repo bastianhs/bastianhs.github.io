@@ -112,6 +112,8 @@ nav svg {
 nav label {
 	display: inline-block;
 	padding: 1rem;
+	width: 2rem;
+	height: 2rem;
 }
 
 .sidebar-menu a {
@@ -228,6 +230,12 @@ nav label {
 	height: 2rem;
 }
 
+.contacts a {
+	display: inline-block;
+	width: 2rem;
+	height: 2rem;
+}
+
 .contacts svg {
 	fill: var(--color2);
 }
@@ -283,8 +291,8 @@ nav label {
 #portfolio a {
 	max-width: 50%;
 	padding: 0.5rem;
-	background-color: var(--color3);
-	border: 0.1rem solid var(--color1);
+	background-color: var(--color4);
+	border: 0.1rem solid var(--color2);
 	border-radius: 1rem;
 	text-align: center;
 	color: var(--color1);
@@ -292,6 +300,5 @@ nav label {
 
 #portfolio a:hover {
 	background-color: var(--color1);
-	border-color: var(--color3);
-	color: var(--color3);
+	color: var(--color4);
 }
