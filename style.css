@@ -1,0 +1,292 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 
+    Custom Styles
+*/
+
+/* Basic styles */
+
+:root {
+	--color1: #E5D9B6;
+	--color2: #A4BE7B;
+	--color3: #5F8D4E;
+	--color4: #285430;
+}
+
+html {
+	scroll-behavior: smooth;
+} 
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: var(--color4);
+	color: var(--color1);
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Navigation */
+
+nav {
+	display: flex;
+	justify-content: end;
+	position: sticky;
+	top: 0;
+	right: 0;
+}
+
+#sidebar-status {
+	display: none;
+}
+
+nav svg {
+	fill: var(--color2);
+}
+
+.sidebar-menu {
+	display: none;
+}
+
+#sidebar-status:checked ~.sidebar-menu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 15rem;
+	height: 100%;
+	background-color: var(--color4);
+	border-left: var(--color3) solid 0.5rem;
+	display: flex;
+	flex-direction: column;
+	box-shadow: -0.25rem 0 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+nav label {
+	display: inline-block;
+	padding: 1rem;
+}
+
+.sidebar-menu a {
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	padding-left: 1rem;
+	color: var(--color1);
+}
+
+@media screen and (min-width: 768px) {
+	html {
+		font-size: 20px;
+	}
+
+	nav label {
+		display: none;
+	}
+
+	.sidebar-menu {
+		width: 100%;
+		height: 4rem;
+		background-color: var(--color4);
+		border-bottom: var(--color3) solid 0.5rem;
+		display: block;
+		box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.5);
+	}
+
+	.sidebar-menu ul {
+		width: 100%;
+		height: 100%;
+		display: flex;
+	}
+
+	.sidebar-menu li:first-child {
+		margin-right: auto;
+	}
+
+	.sidebar-menu a {
+		height: 100%;
+		padding: 0 2rem;
+	}
+}
+
+/* About */
+
+#about {
+	padding: 6rem 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.profile-photo {
+	width: 15rem;
+	height: 15rem;
+	border: 0.25rem solid var(--color2);
+	border-radius: 20%;
+	overflow: hidden;
+}
+
+.profile-photo img {
+	width: 100%;
+}
+
+.introduction {
+	padding: 1rem;
+	max-width: 30rem;
+	font-family: 'Courier New', monospace;
+}
+
+.introduction h1 {
+	font-size: 1.5rem;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+
+.introduction h1 span {
+	font-size: 3rem;
+	font-weight: bold;
+}
+
+.introduction p {
+	margin: 1rem 0;
+}
+
+.introduction p:nth-child(4) {
+	margin: 1rem 0 0;
+}
+
+.introduction p a {
+	color: var(--color1);
+}
+
+.introduction p a:hover {
+	font-weight: bold;
+}
+
+.contacts {
+	margin: 0.5rem 0 1rem 0;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.contacts li {
+	width: 2rem;
+	height: 2rem;
+}
+
+.contacts svg {
+	fill: var(--color2);
+}
+
+.contacts svg:hover {
+	fill: var(--color1);
+}
+
+/* Portfolio */
+
+#portfolio {
+	padding: 4rem 1rem;
+}
+
+#portfolio h2 {
+	text-align: center;
+	font-size: 3rem;
+	font-weight: bold;
+	margin: 2rem;
+}
+
+#portfolio ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+#portfolio li {
+	border: 0.25rem solid var(--color2);
+	border-radius: 1rem;
+	flex: 0 1 20rem;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+}
+
+#portfolio h3 {
+	margin-bottom: 1rem;
+	font-size: 2rem;
+}
+
+#portfolio p {
+	margin: 1rem 0;
+	text-align: justify;
+	line-height: 1.25rem;
+}
+
+#portfolio li p:nth-child(2) {
+	margin: auto 0;
+}
+
+#portfolio a {
+	max-width: 50%;
+	padding: 0.5rem;
+	background-color: var(--color3);
+	border: 0.1rem solid var(--color1);
+	border-radius: 1rem;
+	text-align: center;
+	color: var(--color1);
+}
+
+#portfolio a:hover {
+	background-color: var(--color1);
+	border-color: var(--color3);
+	color: var(--color3);
+}
