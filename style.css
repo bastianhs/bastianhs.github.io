@@ -122,6 +122,11 @@ nav label {
 	color: var(--color1);
 }
 
+.sidebar-menu a:hover {
+	font-weight: bold;
+	background-color: var(--color3);
+}
+
 @media screen and (min-width: 768px) {
 	html {
 		font-size: 20px;
